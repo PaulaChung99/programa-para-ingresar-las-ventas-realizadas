@@ -418,57 +418,19 @@ def archivoTXT(ventana,paginaPpal):
     botonEliminar.place(x=10, y=150,width=200,height=30)
 
 
-def commaSeparatedValue(ventana):
-    # #Función para guardar datos en formato csv
-    # def guardar_csv(datos):
-    #     with open("ventas.csv", mode="a", newline="") as file:
-    #         writer = csv.writer(file)
-    #         writer.writerow(datos)
+def archivoCSV(ventana):
+    borrarTodo(ventana)
 
-    # #csv
-    # #Función para mostrar los datos en formato csv
-    # def mostrar_csv():
-    #     with open("ventas.csv", "r") as file:
-    #         reader = csv.reader(file)
-    #         for row in reader:
-    #             print("Nombre:", row[0])
-    #             print("Precio:", row[1])
-    #             print()
-    #Función para guardar datos en formato csv
-    # def guardar_csv(datos):
-    #     with open("ventas.csv", mode="a", newline="") as file:
-    #         writer = csv.writer(file)
-    #         writer.writerow(datos)
+    def cargar_datos_csv():
+        try:
+            df = pd.read_csv('ventas.csv')
+            return df
+        except FileNotFoundError:
+            print("El archivo CSV no existe.")
+            return pd.DataFrame()
 
-    # #csv
-    # #Función para mostrar los datos en formato csv
-    # def mostrar_csv():
-    #     with open("ventas.csv", "r") as file:
-    #         reader = csv.reader(file)
-    #         for row in reader:
-    #             print("Nombre:", row[0])
-    #             print("Precio:", row[1])
-    #             print()
-
-    #     # Función para modificar datos en formato csv
-    #     def modificar_csv(nombre, nuevo_precio):
-    #         with open("ventas.csv", "r") as file:
-    #             data = list(csv.reader(file))
-    #             for row in data:
-    #                 if row[0] == nombre:
-    #                     row[1] = nuevo_precio
-    #         with open("ventas.csv", "w", newline="") as file:
-    #             writer = csv.writer(file)
-    #             writer.writerows(data)
-
-    #     # Función para eliminar datos en formato csv
-    #     def eliminar_csv(nombre):
-    #         with open("ventas.csv", "r") as file:
-    #             data = list(csv.reader(file))
-    #             data = [row for row in data if row[0] != nombre]
-    #         with open("ventas.csv", "w", newline="") as file:
-    #             writer = csv.writer(file)
-    #             writer.writerows(data)
+    
+    
     pass                
     
 
