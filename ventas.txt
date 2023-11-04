@@ -1,0 +1,10 @@
+pomelo 100
+peels 40
+nuez 30
+alfajor 100
+ag 100
+ag 100
+limon 3333
+choc0 11
+choc0 11
+choc0 11
