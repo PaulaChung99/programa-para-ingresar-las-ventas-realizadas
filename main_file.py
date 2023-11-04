@@ -3,7 +3,7 @@ Archivo ppal con paginas y botones
 '''
 import tkinter as tk
 from tkinter import *
-from funciones import baseDeDatos,archivoTXT,imprimirGrafica,borrarTodo,volver
+from functions_file import baseDeDatos,archivoTXT,imprimirGrafica,borrarTodo,volver
 
 ventana = tk.Tk()
 ventana.geometry('570x250')
